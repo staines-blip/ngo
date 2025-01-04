@@ -1,39 +1,7 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react'
-import './ListProduct.css'
-import cross_icon from '../assets/cross_icon.png'
 
-const ListProduct = () => {
-
-  const[all_product,setAllProduct]=useState([]);
-
-  const fetchInfo = async()=>{
-    await fetch('http://localhost:4000/all_product')
-    .then((res)=>res.json())
-    .then((data)=>{setAllProduct(data)});
-  }
-
-  useEffect(()=>{
-    fetchInfo();
-  },[])
-
-  const remove_product =async ()=>{
-    await fetch('http://localhost:4000/removeproduct',{
-      method:'POST',
-      headers:{
-        Accept:'application/json',
-        'Content-Type':'application/json',
-      },
-      body:JSON.stringify({id:id})
-    })
-    await fetchInfo();
-  }
-  return (
-    <div className='list-product'>
-=======
 import React, { useEffect, useState } from 'react';
 import './ListProduct.css';
-import cross_icon from '../../assets/Cross_icon.png';
+import cross_icon from '../../assets/Cross_Icon.png';
 
 const ListProduct = () => {
   const [allProducts, setAllProducts] = useState([]);
@@ -82,7 +50,6 @@ const ListProduct = () => {
 
   return (
     <div className="list-product">
->>>>>>> feb925c0422f713c3f29620771a67d3d5586d958
       <h1>All Product List</h1>
       <div className="listproduct-format-main">
         <p>Product</p>
@@ -93,28 +60,6 @@ const ListProduct = () => {
         <p>Remove</p>
       </div>
       <div className="listproduct-all_product">
-<<<<<<< HEAD
-        <hr/>
-        {all_product.map((product,index)=>{
-          return<>
-           <div key={index} className="listproduct-format-main listproduct-format">
-            <img src={product.imgage} alt="" className="listproduct-product-icon"/>
-            <p>{product.name}</p>
-            <p>${product.old_price}</p>
-            <p>${product.new_price}</p>
-            <p>${product.category}</p>
-            <img onClick={()=>{remove_product(product.id)}} className='listproduct-remove-icon' src={cross_icon} alt="" />
-            </div>
-            <hr/>
-            </>
-        })}
-      </div>
-    </div>
-  )
-}
-
-export default ListProduct
-=======
         <hr />
         {allProducts.length > 0 ? (
           allProducts.map((product, index) => (
@@ -148,4 +93,3 @@ export default ListProduct
 };
 
 export default ListProduct;
->>>>>>> feb925c0422f713c3f29620771a67d3d5586d958
