@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 import logo from '../Assets/logo.png'; // Path to your logo
 import cart from '../Assets/cart.png'; // Path to your cart icon
@@ -26,61 +26,67 @@ export const Navbar = () => {
         <img src={logo} alt="Logo" />
         <p>Shop</p>
       </div>
-
       {/* Navigation Menu */}
       <ul className="nav-menu">
+      <li>
+          <NavLink to="/" activeClassName="active">
+            HOME
+          </NavLink>
+        </li>
+
+      
         <li
           className="dropdown"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <Link to="/" className="active">
+          <NavLink to="/blockprinting" activeClassName="active">
             Blockprinting
-          </Link>
+          </NavLink>
           {isDropdownVisible && (
             <ul className="dropdown-menu">
-              <li><Link to="/towels">Towels</Link></li>
-              <li><Link to="/bedsheets">Bedsheets</Link></li>
-              <li><Link to="/napkins">Napkins</Link></li>
-              <li><Link to="/bags">Bags</Link></li>
+              <li><NavLink to="/towels">Towels</NavLink></li>
+              <li><NavLink to="/bedsheets">Bedsheets</NavLink></li>
+              <li><NavLink to="/napkins">Napkins</NavLink></li>
+              <li><NavLink to="/bags">Bags</NavLink></li>
             </ul>
           )}
         </li>
         <li>
-          <Link to="/cupcoaster">Cupcoaster</Link>
+          <NavLink to="/cupcoaster" activeClassName="active">Cupcoaster</NavLink>
         </li>
         <li>
-          <Link to="/paperfiles">Paperfiles</Link>
+          <NavLink to="/paperfiles" activeClassName="active">Paperfiles</NavLink>
         </li>
         <li>
-          <Link to="/bamboo">Bamboo</Link>
+          <NavLink to="/bamboo" activeClassName="active">Bamboo</NavLink>
         </li>
         <li>
-          <Link to="/admin">Admin</Link>
+          <NavLink to="/admin" activeClassName="active">Admin</NavLink>
         </li>
       </ul>
 
       {/* Icons and Login Section */}
       <div className="nav-icons">
         {/* Wishlist */}
-        <Link to="/wishlist">
+        <NavLink to="/wishlist">
           <div className="nav-icon">
             <img src={heart} alt="Heart" className="nav-heart-logo" />
           </div>
-        </Link>
+        </NavLink>
 
         {/* Cart */}
         <div className="nav-cart">
-          <Link to="/cart" className="nav-cart-link">
+          <NavLink to="/cart" className="nav-cart-link">
             <img src={cart} alt="Cart" className="nav-cart-icon" />
             <div className="nav-cart-count">{cartCount}</div> {/* Dynamic count */}
-          </Link>
+          </NavLink>
         </div>
 
         {/* Login Button */}
-        <Link to="/login">
+        <NavLink to="/login">
           <img src={user} alt="User" className="nav-user-icon" />
-        </Link>
+        </NavLink>
       </div>
     </div>
   );

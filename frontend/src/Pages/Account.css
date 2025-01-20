@@ -1,0 +1,172 @@
+/* Account Page Styling */
+.account-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+  }
+  
+  /* Header Styling */
+  .account-container h1 {
+    text-align: center;
+    color: #333;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  /* Section Titles */
+  h2 {
+    color: #333;
+    font-size: 28px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    font-weight: normal;
+  }
+  
+  h3 {
+    color: #333;
+    font-size: 24px;
+    margin-top: 20px;
+  }
+  
+  /* Account Information */
+  .account-info {
+    margin-bottom: 30px;
+  }
+  
+  .account-info p {
+    font-size: 18px;
+    color: #555;
+  }
+  
+  .account-info a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .account-info a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Error and Loading States */
+  .error-message, .loading-message {
+    color: red;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .loading-message {
+    color: #333;
+  }
+  
+  /* Order, Cart, and Wishlist Sections */
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  ul li {
+    background-color: #fff;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  ul li h4 {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  ul li p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .order-details {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  .order-status {
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 4px;
+    color: #fff;
+  }
+  
+  .order-status.pending {
+    background-color: #ffcc00;
+  }
+  
+  .order-status.shipped {
+    background-color: #28a745;
+  }
+  
+  .order-status.delivered {
+    background-color: #007bff;
+  }
+  
+  .order-status.canceled {
+    background-color: #dc3545;
+  }
+  
+  /* Empty Cart or Wishlist Message */
+  .empty-message {
+    font-size: 18px;
+    color: #777;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Links in sections (e.g., View Addresses) */
+  .section-link {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #0066cc;
+    text-decoration: none;
+  }
+  
+  .section-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Styling for Small Screens */
+  @media (max-width: 768px) {
+    .account-container {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    h1 {
+      font-size: 30px;
+    }
+  
+    h2, h3 {
+      font-size: 22px;
+    }
+  
+    .account-info p {
+      font-size: 16px;
+    }
+  
+    ul li {
+      padding: 12px;
+    }
+  
+    .order-details {
+      font-size: 12px;
+    }
+  
+    .order-status {
+      font-size: 14px;
+    }
+  }
